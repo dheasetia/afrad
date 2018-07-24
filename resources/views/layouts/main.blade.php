@@ -176,20 +176,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-109549456-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+
 </head>
 
 <body class="fix-sidebar">
@@ -209,7 +196,7 @@
                     <b>
                         <!--This is dark logo icon-->
                         <!--This is light logo icon-->
-                        <img src="{{asset('plugins/images/afrad_logo.jpeg')}}" alt="home" class="light-logo"/>
+                        <img src="{{asset('plugins/images/andalus_logo.png')}}" alt="home" class="light-logo"/>
                     </b>
                     <span class="hidden-xs">
                         <!--This is light logo text-->
@@ -243,7 +230,7 @@
             @yield('content')
         </div>
         <!-- /.container-fluid -->
-        <footer class="footer text-center"> 2017 &copy; مؤسسة سالم بن أحمد بالحمر وعائلته الخيرية </footer>
+        <footer class="footer text-center"> {{date('Y')}} &copy; مؤسسة سالم بن أحمد بالحمر وعائلته الخيرية </footer>
     </div>
     <!-- /#page-wrapper -->
 </div>

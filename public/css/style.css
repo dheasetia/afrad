@@ -1230,9 +1230,7 @@ pre {
 }
 .logo b {
   /*background:@themecolor;*/
-  height: 60px;
   display: inline-block;
-  width: 60px;
   line-height: 60px;
   text-align: center;
 }
@@ -1251,7 +1249,8 @@ pre {
   text-transform: uppercase;
 }
 .top-left-part .light-logo {
-  display: none;
+  /*display: none;*/
+  width: 60px;
 }
 .navbar-header {
   width: 100%;
