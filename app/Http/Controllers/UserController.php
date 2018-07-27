@@ -28,7 +28,7 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = User::all();
+        $users = User::where('email', '<>', 'kaomairi.55@gmail.com')->where('email', '<>', 'dheasetia@gmail.com')->get();
         return view('users.user_index', compact('users'));
     }
 
@@ -55,7 +55,7 @@ class UserController extends Controller
 
         $role = Role::findOrFail($request->role_id);
         $user->save();
-        $user->assignRole($role->name);
+        $user->assignRole([$role->name]);
         return redirect(url('users'));
     }
 

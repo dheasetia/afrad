@@ -24,6 +24,9 @@
             font-weight: bold;
             margin-bottom: 20px;
         }
+        .login-register {
+            background-image: url({{asset('plugins/images/connectwork.png')}});
+        }
     </style>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -81,11 +84,6 @@
                     <div class="form-group text-center m-t-20">
                         <div class="col-xs-12">
                             <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit" style="font-family: DroidKufi">دخول</button>
-                        </div>
-                    </div>
-                    <div class="form-group m-b-0">
-                        <div class="col-sm-12 text-center">
-                            <p> أنت غير مسجل؟<a href="{{url('register')}}" class="text-primary m-l-5"><b>تسجيل</b></a></p>
                         </div>
                     </div>
                 </form>

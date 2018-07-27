@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
+Route::get('/dashboard', function() {
+    return redirect(url('/'));
+});
 //me
 Route::get('me', 'MeController@show');
 Route::put('me', 'MeController@update');

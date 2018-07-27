@@ -835,6 +835,9 @@ var BeneficiaryCreate = function () {
             mobileInput.val('');
             emailInput.val('');
             descriptionInput.val('');
+            nameInput.closest('.form-group').removeClass('has-error');
+            form.find('.help-block').remove();
+            form.find('.form-group').removeClass('has-error');
         });
 
         button.on('click', function () {
@@ -1891,8 +1894,6 @@ var BeneficiaryCreate = function () {
             });
         });
     };
-
-
 
     return {
         init: function () {

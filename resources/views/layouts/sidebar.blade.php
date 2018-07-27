@@ -4,7 +4,7 @@
         <div class="user-profile">
             <div class="dropdown user-pro-body">
                 <div>
-                    @if(Auth::user()->avatar !== '')
+                    @if(Auth::user()->avatar != '')
                         <img src="{{asset('/files/users/avatars/thumbnails/thumb_') . \Illuminate\Support\Facades\Auth::user()->avatar}}" alt="user-img" class="img-circle">
                     @else
                         <img src="{{asset('/plugins/images/male_blank.jpg')}}" alt="user-img" class="img-circle">
@@ -38,20 +38,8 @@
             </div>
         </div>
         <ul class="nav" id="side-menu">
-            <li class="sidebar-search hidden-sm hidden-md hidden-lg">
-                <!-- input-group -->
-                <div class="input-group custom-search-form">
-                    <input type="text" class="form-control" placeholder="بحث شامل ...">
-                    <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </span>
-                </div>
-                <!-- /input-group -->
-            </li>
             <li>
-                <a href="{{url('/')}}" class="waves-effect">
+                <a href="{{url('/dashboard')}}" class="waves-effect">
                     <i class="fa fa-home fa-fw"></i>
                     <span class="hide-menu">الرئيسية </span>
                 </a>
@@ -114,7 +102,7 @@
                     @endcan
                 </ul>
             </li>
-
+            @role('admin')
             <li>
                 <a href="#" class="waves-effect">
                     <i class="fa fa-shield fa-fw" data-icon="v"></i>
@@ -137,7 +125,7 @@
                     @endcan
                 </ul>
             </li>
-            @role('admin')
+
             <li>
                 <a href="#" class="waves-effect">
                     <i class="fa fa-cogs fa-fw" data-icon="v"></i>
